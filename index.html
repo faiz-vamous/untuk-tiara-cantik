@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Untuk Tiaraku ❤️</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap');
+
+    /* Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe6f0 0%, #ffcce0 100%);
+      font-family: 'Montserrat', sans-serif;
+      color: #a30f59;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      position: relative;
+      padding: 1rem;
+    }
+
+    /* Overlay soft light */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at center, rgba(255, 182, 193, 0.35), transparent 70%);
+      z-index: 0;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      margin-bottom: 0.4rem;
+      text-shadow: 0 2px 6px rgba(163, 15, 89, 0.6);
+      z-index: 1;
+    }
+
+    p.intro {
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 2.2rem;
+      letter-spacing: 0.05em;
+      text-shadow: 0 1px 3px rgba(163, 15, 89, 0.3);
+      z-index: 1;
+    }
+
+    img {
+      width: 230px;
+      max-width: 90vw;
+      border-radius: 25px;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 30px rgba(163, 15, 89, 0.35);
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      z-index: 1;
+    }
+    img:hover {
+      transform: scale(1.1) rotate(-2deg);
+      box-shadow: 0 14px 40px rgba(163, 15, 89, 0.55);
+    }
+
+    button {
+      background: linear-gradient(45deg, #d81b60, #a30f59);
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      padding: 0.8rem 2.5rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin: 0 1rem 2.5rem 1rem;
+      box-shadow: 0 8px 20px rgba(216, 27, 96, 0.7);
+      transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      user-select: none;
+      z-index: 1;
+    }
+    button:hover {
+      background: linear-gradient(45deg, #a30f59, #6f0a3e);
+      box-shadow: 0 12px 30px rgba(163, 15, 89, 0.9);
+      transform: translateY(-4px);
+    }
+    button:focus {
+      outline: 3px solid #ff9fbd;
+      outline-offset: 3px;
+    }
+
+    .letter {
+      background: #fff0f5;
+      border-radius: 30px;
+      padding: 3rem 3.5rem;
+      max-width: 620px;
+      margin: 0 auto 3rem auto;
+      color: #7b0f4a;
+      font-size: 1.3rem;
+      line-height: 1.7;
+      box-shadow: 0 10px 35px rgba(163, 15, 89, 0.15);
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 1.2s ease, max-height 1.2s ease;
+      font-family: 'Montserrat', sans-serif;
+      user-select: text;
+      z-index: 1;
+      position: relative;
+      white-space: pre-wrap;
+    }
+
+    .letter.show {
+      opacity: 1;
+      max-height: 900px;
+      overflow: visible;
+    }
+
+    .heart {
+      font-size: 4rem;
+      color: #d81b60;
+      margin-top: 1.5rem;
+      animation: pulse 1.6s infinite ease-in-out;
+      user-select: none;
+      text-shadow: 0 0 15px #d81b60;
+      z-index: 1;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.4); }
+    }
+
+    /* Sakura falling */
+    .sakura {
+      position: fixed;
+      top: -40px;
+      width: 25px;
+      height: 25px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Cherry_blossom.svg/1024px-Cherry_blossom.svg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.85;
+      pointer-events: none;
+      z-index: 0;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      will-change: transform, opacity;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 3rem;
+      }
+      .letter {
+        padding: 2rem 2.5rem;
+        font-size: 1.1rem;
+      }
+      button {
+        padding: 0.6rem 1.8rem;
+        font-size: 1.1rem;
+        margin: 0.5rem;
+      }
+      img {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hai Tiaraku yang Cantik 💖</h1>
+  <img src="WhatsApp Image 2025-05-30 at 13.08.20.jpeg" alt="Foto Kita" title="Foto Kita" />
+
+  <p class="intro">Mas punya sesuatu spesial buat kamu...</p>
+
+  <div>
+    <button id="btnOpen" aria-label="Buka Surat Cinta">
+      💌 Buka Surat Cinta
+    </button>
+    <button id="btnToggleMusic" style="display:none;" aria-label="Toggle Musik">
+      🔇 Pause Musik
+    </button>
+  </div>
+
+  <div class="letter" id="loveLetter" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="heart" aria-hidden="true">❤️❤️❤️</div>
+
+  <audio id="romanticMusic" loop preload="auto">
+    <source src="WhatsApp Audio 2025-05-30 at 13.06.11.mpeg" type="audio/mpeg" />
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+<script>
+  const btnOpen = document.getElementById('btnOpen');
+  const btnToggleMusic = document.getElementById('btnToggleMusic');
+  const loveLetter = document.getElementById('loveLetter');
+  const audio = document.getElementById('romanticMusic');
+
+  const loveText = `Sayangku Tiaraku,
+
+Tiap hari bersamamu seperti lagu indah yang tak pernah membosankan.
+Kamu adalah rumahku dan tempatku pulang.
+Terima kasih sudah hadir dan menetap di hatiku.
+Aku cinta kamu… selamanya ❤️`;
+
+  // Typewriter effect untuk surat cinta
+  async function typeWriter(text, element, delay = 50) {
+    element.textContent = '';
+    for(let i = 0; i < text.length; i++) {
+      element.textContent += text[i];
+      await new Promise(res => setTimeout(res, delay));
+      // scroll to bottom smoothly while typing (for small screens)
+      element.scrollTop = element.scrollHeight;
+    }
+  }
+
+  btnOpen.addEventListener('click', async () => {
+    btnOpen.disabled = true;
+
+    // Tampilkan surat dengan efek ketik
+    loveLetter.classList.add('show');
+    await typeWriter(loveText, loveLetter, 40);
+
+    // Mainkan musik
+    try {
+      await audio.play();
+    } catch(e) {
+      console.warn('Audio tidak bisa diputar otomatis.');
+    }
+
+    // Ganti tombol
+    btnOpen.style.display = 'none';
+    btnToggleMusic.style.display = 'inline-flex';
+    btnToggleMusic.textContent = '🔇 Pause Musik';
+    btnToggleMusic.disabled = false;
+
+    // Efek klik suara lembut
+    playClickSound();
+  });
+
+  btnToggleMusic.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      btnToggleMusic.textContent = '🔇 Pause Musik';
+    } else {
+      audio.pause();
+      btnToggleMusic.textContent = '▶️ Play Musik';
+    }
+  });
+
+  // Suara klik lembut (bisa disesuaikan dengan suara klik manis)
+  function playClickSound() {
+    const clickSound = new Audio('https://actions.google.com/sounds/v1/buttons/button_16.mp3');
+    clickSound.volume = 0.25;
+    clickSound.play();
+  }
+
+  // Animasi bunga sakura jatuh
+  function createSakura() {
+    const sakura = document.createElement('div');
+    sakura.classList.add('sakura');
+    sakura.style.left = Math.random() * 100 + 'vw';
+    sakura.style.animationDuration = (6 + Math.random() * 8) + 's';
+    sakura.style.animationDelay = (Math.random() * 12) + 's';
+    sakura.style.opacity = 0.6 + Math.random() * 0.4;
+    sakura.style.transform = `rotate(${Math.random() * 360}deg)`;
+    const size = 15 + Math.random() * 20;
+    sakura.style.width = sakura.style.height = size + 'px';
+
+    document.body.appendChild(sakura);
+
+    sakura.style.animationName = 'fall';
+
+    sakura.addEventListener('animationend', () => {
+      sakura.remove();
+    });
+  }
+
+  setInterval(createSakura, 350);
+
+</script>
+
+</body>
+</html>
+
+
+
